@@ -5,7 +5,7 @@
         String dcd = "";
         for(int i = 0;i<parts.size();i++){
              int strt = parts.get(i).getStart();
-             int lgth = parts.get(i).getLength;
+             int lgth = parts.get(i).getLength();
              dcd += masterString.substring(strt, strt+lgth);
              }
         return dcd;
@@ -18,10 +18,10 @@
      * @return an ArrayList of string parts of the master string that can be combined * to create word
      */
          public ArrayList<StringPart> encodeString(String word)
-            ArrayList all = new ArrayList<StringPart>();
-            int i = 1;
-            while( i < word.length){
-                i =findPart(word).getLength();
+            ArrayList<> all = new ArrayList<StringPart>();
+           
+            while(word.length() != 0){
+                int i = findPart(word).getLength();
                 all.add(findPart(word));
                 word = word.substring(i);
                 }

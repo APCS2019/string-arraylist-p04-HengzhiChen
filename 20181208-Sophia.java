@@ -4,8 +4,8 @@
 	    public String decodeString(ArrayList<StringPart> parts){
 	        String dcd = "";
 	        for(int i = 0;i<parts.size();i++){
-	             int strt = getStart(parts.get(i));
-	             int lgth = getLength(parts.get(i));
+	             int strt = parts.get(i).getStart();
+	             int lgth = parts.get(i).getLength();
 	             dcd += masterString.indexOf(strt, strt+lgth);
 	            }
 	         return dcd;
@@ -21,7 +21,7 @@
 	           ArrayList all = new ArrayList<StringPart>();
 	           int i = 1;
 	           while( i < word.length){
-	                i = getLength(findPart(word));
+	                i = findPart(word).getLength();
                 	all.add(findPart(word));
 	                word = word.substring(i-1);
 	           }
